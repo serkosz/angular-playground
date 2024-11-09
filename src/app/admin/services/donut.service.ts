@@ -18,18 +18,13 @@ import {
 
 import { Donut } from '../models/donut.model';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class DonutService {
   private donuts: Donut[] = [];
-  private timestamp: number;
 
-  constructor(private http: HttpClient) {
-    this.timestamp = Date.now();
-  }
-
-  getTimestamp(): number {
-    return this.timestamp;
-  }
+  constructor(private http: HttpClient) {}
 
   read() {
     if (this.donuts.length) {

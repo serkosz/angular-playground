@@ -1,14 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { DonutFormComponent } from '../../components/donut-form/donut-form.component';
 import { Donut } from '../../models/donut.model';
 import { DonutService } from '../../services/donut.service';
 
 @Component({
-  standalone: true,
-  imports: [DonutFormComponent],
-  providers: [],
   selector: 'donut-single',
   template: `
     <div>
@@ -35,8 +31,6 @@ export class DonutSingleComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-
-    console.log("timesamp from DonutService", this.donutService.getTimestamp());
 
     this.donutService
       .readOne(id)
