@@ -20,7 +20,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 `ng generate module test-playground` - generate module test-playground
 
-`ng generate component test-playground/components/ng-content-test --module test-playground` - generate component ng-content-test within test-playground module and folder `components`
+`ng generate component test-playground/features/ng-content` - (firstly cd to src\app) generate component ng-content-test within test-playground module and folder `features`
 
 ## Build
 
